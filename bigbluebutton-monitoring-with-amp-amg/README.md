@@ -8,9 +8,10 @@ This repository documents the configuration for using AMP and AMG. Steps are doc
 
 1. Provision a workspace in Amazon Managed Service for Prometheus. Note down the Endpoint - remote write URL.
 2. Provision a workspace in Amazon Managed Grafana.
-3. Update the file bbb_exporter_secrets.env with the API_BASE_URL and API_SECRET by executing the command "bbb-conf --secret"
-4. Update the docker-compose.yaml removing reference to Grafana container
-5. Update the prometheus.yml adding remote write configuration (Provided below). 
+3. Update the IAM Role associated with the BBB Application Instance to have permissions to publish metrics to AMP. Refer [Set up metrics ingestion from an Amazon EC2 instance using remote write - Amazon Managed Service for Prometheus](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-remote-write-EC2.html)  
+4. Update the file bbb_exporter_secrets.env with the API_BASE_URL and API_SECRET by executing the command "bbb-conf --secret"
+5. Update the docker-compose.yaml removing reference to Grafana container
+6. Update the prometheus.yml adding remote write configuration (Provided below). 
 --------
 
     remote_write:
