@@ -1,0 +1,8 @@
+{
+    "Variables": {
+        "ECR_REPOSITORY_NAME": "<ecs-repository-name>",
+        "ECS_CLUSTER_NAME": "<ecs-cluster-name>",
+        "ECS_SERVICE_NAME": "<ecs-service-name>",
+        "ECS_TASK_DEFINITION_NAME": "<ecs-task-definition-name>"
+    }
+}
